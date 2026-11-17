@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riad Energy Twin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind via CDN (no build step needed) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              display: ['Fraunces', 'serif'],
+            },
+            colors: {
+              zellige: { 500: '#0f8f7a', 600: '#0b7a68', 700: '#096454' },
+              sand: { 50: '#fbf7ef', 100: '#f3e9d8', 200: '#e8d9bd', 300: '#d9c39a' },
+              terracotta: { 500: '#c9825b', 600: '#b06a45' },
+            },
+            boxShadow: {
+              card: '0 8px 30px rgba(80, 55, 20, 0.10)',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-sand-50 font-sans text-stone-800 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
